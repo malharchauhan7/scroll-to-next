@@ -1,7 +1,7 @@
-
 # react-scroll-to-next
 
 `react-scroll-to-next` is a React component that enables smooth scrolling between sections of a webpage. When you click on the button positioned at the bottom-right corner, the page scrolls to the next section. Once the last section is reached, clicking the button loops back to the first section. This is useful for creating smooth, interactive websites where users can easily navigate through content by scrolling through different sections.
+
 ## Features
 
 - **Smooth Scroll:** Scroll between sections smoothly with `scrollIntoView`.
@@ -18,13 +18,14 @@ Alternatively, you can install it using yarn:
 ```bash
 yarn add react-scroll-to-next
 ```
+
 ## Usage/Examples
 
 To use react-scroll-to-next in your React application, follow these steps:
 
--  Create refs for each section you want to scroll through.
--  Pass the refs array to the ScrollToNext component.
--  Click the button to smoothly scroll between sections.
+- Create refs for each section you want to scroll through.
+- Pass the refs array to the ScrollToNext component.
+- Click the button to smoothly scroll between sections.
 
 ### Examples
 
@@ -43,13 +44,22 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <div ref={section1Ref} style={{ height: "100vh", backgroundColor: "#f1f1f1" }}>
+      <div
+        ref={section1Ref}
+        style={{ height: "100vh", backgroundColor: "#f1f1f1" }}
+      >
         <h2>Section 1</h2>
       </div>
-      <div ref={section2Ref} style={{ height: "100vh", backgroundColor: "#e0e0e0" }}>
+      <div
+        ref={section2Ref}
+        style={{ height: "100vh", backgroundColor: "#e0e0e0" }}
+      >
         <h2>Section 2</h2>
       </div>
-      <div ref={section3Ref} style={{ height: "100vh", backgroundColor: "#d0d0d0" }}>
+      <div
+        ref={section3Ref}
+        style={{ height: "100vh", backgroundColor: "#d0d0d0" }}
+      >
         <h2>Section 3</h2>
       </div>
 
@@ -60,6 +70,7 @@ const App: React.FC = () => {
 };
 
 export default App;
+```
 
 ## Button Styling
 
@@ -80,13 +91,12 @@ Example:
 />
 ```
 
-
 ## Props
 
-| Prop      | Type                                              | Description                                                                                                                               | Default                       |
-|-----------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| `sections`| `React.RefObject<HTMLElement>[]`                  | An array of refs that reference the sections you want to scroll through. Each section must be wrapped with `ref` using `useRef` or `createRef`. | -                             |
-| `style`   | `React.CSSProperties`                             | An optional prop to customize the styling of the button. You can override the default button styling with this prop.                       | Default style applies         |
+| Prop       | Type                             | Description                                                                                                                                     | Default               |
+| ---------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `sections` | `React.RefObject<HTMLElement>[]` | An array of refs that reference the sections you want to scroll through. Each section must be wrapped with `ref` using `useRef` or `createRef`. | -                     |
+| `style`    | `React.CSSProperties`            | An optional prop to customize the styling of the button. You can override the default button styling with this prop.                            | Default style applies |
 
 ## Contributing
 
@@ -94,8 +104,10 @@ Feel free to open issues and submit pull requests if you have suggestions or bug
 
 [Github](https://github.com/malharchauhan7/scroll-to-next)
 
-
 ## License
 
 [ISC]()
 
+```
+
+```
