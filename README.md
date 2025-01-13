@@ -31,7 +31,7 @@ To use react-scroll-to-next in your React application, follow these steps:
 
 ```typescript
 import React, { useRef } from "react";
-import ScrollToNext from "react-scroll-to-next";
+import { ScrollToNext } from "react-scroll-to-next";
 
 const App: React.FC = () => {
   // Create refs for each section
