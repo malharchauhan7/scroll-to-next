@@ -74,7 +74,7 @@ export default App;
 
 ## Button Styling
 
-By default, the button is a fixed, circular button located at the bottom-right corner of the screen. It contains a simple arrow (→) to indicate that it scrolls to the next section. You can easily style the button further by passing a custom style object to the component.
+By default, the button is a fixed, circular button located at the bottom-right corner of the screen. It contains a simple arrow (➤) to indicate that it scrolls to the next section. You can easily style the button further by passing a custom style object to the component.
 
 Example:
 
@@ -108,6 +108,6 @@ Feel free to open issues and submit pull requests if you have suggestions or bug
 
 [ISC]()
 
-```
+## Author
 
-```
+Malhar Chauhan [Github](https://github.com/malharchauhan7/scroll-to-next)
