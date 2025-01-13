@@ -35,9 +35,9 @@ import ScrollToNext from "react-scroll-to-next";
 
 const App: React.FC = () => {
   // Create refs for each section
-  const section1Ref = useRef<HTMLElement>(null);
-  const section2Ref = useRef<HTMLElement>(null);
-  const section3Ref = useRef<HTMLElement>(null);
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
 
   // Define the sections array
   const sections = [section1Ref, section2Ref, section3Ref];
