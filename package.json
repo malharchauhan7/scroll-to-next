@@ -1,13 +1,13 @@
 {
   "name": "react-scroll-to-next",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "type": "module",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "npx rollup -c"
   },
-  "keywords": [],
+  "keywords": ["react","scroll-to-next","ScrollToNext","go-to-next","button","scroll"],
   "author": "Malhar Chauhan",
   "license": "ISC",
   "description": "",
