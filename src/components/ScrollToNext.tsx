@@ -1,6 +1,6 @@
 import * as React  from "react";
 import  { useState } from "react";
-// Define the props interface
+
 interface ScrollToNextProps {
   sections: React.RefObject<HTMLElement>[];
   style?:React.CSSProperties
@@ -9,11 +9,11 @@ interface ScrollToNextProps {
 const ScrollToNext: React.FC<ScrollToNextProps> = ({ sections , style}) => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState<number>(0);
 
-  // Scroll to the next section or back to the first section
+  
   const scrollToNextSection = () => {
     let nextSectionIndex = currentSectionIndex + 1;
 
-    // If it's the last section, loop back to the first
+   
     if (nextSectionIndex >= sections.length) {
       nextSectionIndex = 0;
     }
@@ -24,7 +24,7 @@ const ScrollToNext: React.FC<ScrollToNextProps> = ({ sections , style}) => {
         behavior: "smooth",
         block: "start",
       });
-      // Move to the next section or back to the first section
+    
       setCurrentSectionIndex(nextSectionIndex); 
     }
   };
