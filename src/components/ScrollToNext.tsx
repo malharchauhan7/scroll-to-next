@@ -1,17 +1,31 @@
 import * as React  from "react";
-import  { useState } from "react";
+import  { useState, useEffect } from "react";
 
 interface ScrollToNextProps {
   sections: React.RefObject<HTMLElement>[];
   style?:React.CSSProperties,
-  x ?: React.CSSProperties,
-  y ?: React.CSSProperties
+  x ?: string,
+  y ?: string,
+  showOnMobile?: boolean
 }
 
-const ScrollToNext: React.FC<ScrollToNextProps> = ({ sections , style, x="20px", y="20px"}) => {
+const ScrollToNext: React.FC<ScrollToNextProps> = ({ sections , style, x="20px", y="20px",  showOnMobile = true}) => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState<number>(0);
-
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Consider mobile devices as width <= 768px
+    };
+
+    handleResize(); // Check on initial render
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const scrollToNextSection = () => {
     let nextSectionIndex = currentSectionIndex + 1;
 
@@ -30,6 +44,8 @@ const ScrollToNext: React.FC<ScrollToNextProps> = ({ sections , style, x="20px",
       setCurrentSectionIndex(nextSectionIndex); 
     }
   };
+
+  if (isMobile && !showOnMobile) return null;
 
   return (
     <button

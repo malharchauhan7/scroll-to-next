@@ -78,8 +78,8 @@ export default App;
 | ---------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `sections` | `React.RefObject<HTMLElement>[]` | An array of refs that reference the sections you want to scroll through. Each section must be wrapped with `ref` using `useRef` or `createRef`. | -                     |
 | `style`    | `React.CSSProperties`            | An optional prop to customize the styling of the button. You can override the default button styling with this prop.                            | Default style applies |
-| `x and y`    | `React.CSSProperties`            | x: Determines the horizontal distance from the right edge of the screen. y: Determines the vertical distance from the bottom edge of the screen.                            | Default style applies |
-
+| `x and y`    | `string`            | x: Determines the horizontal distance from the right edge of the screen. y: Determines the vertical distance from the bottom edge of the screen.                            | Default style applies |
+| `showOnMobile`  | `boolean` | You can decide whether the button should appear on mobile devices by toggling | default is true |
 
 
 ## Button Styling
@@ -108,6 +108,13 @@ y : Determines the vertical distance from the bottom edge of the screen.
 ```javascript
    <ScrollToNext sections={sections} x={"5px"} y={"10px"}/>
 ```
+
+## ShowonMobile
+By default, showOnMobile is true, if you don't want to render button on mobile devices you can set to false
+```javascript
+  <ScrollToNext sections={sections} x={"5px"} y={"10px"} showOnMobile={false}/>
+```
+
 
 ## Contributing
 
