@@ -72,6 +72,16 @@ const App: React.FC = () => {
 export default App;
 ```
 
+## Props
+
+| Prop       | Type                             | Description                                                                                                                                     | Default               |
+| ---------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `sections` | `React.RefObject<HTMLElement>[]` | An array of refs that reference the sections you want to scroll through. Each section must be wrapped with `ref` using `useRef` or `createRef`. | -                     |
+| `style`    | `React.CSSProperties`            | An optional prop to customize the styling of the button. You can override the default button styling with this prop.                            | Default style applies |
+| `x and y`    | `React.CSSProperties`            | x: Determines the horizontal distance from the right edge of the screen. y: Determines the vertical distance from the bottom edge of the screen.                            | Default style applies |
+
+
+
 ## Button Styling
 
 By default, the button is a fixed, circular button located at the bottom-right corner of the screen. It contains a simple arrow (➤) to indicate that it scrolls to the next section. You can easily style the button further by passing a custom style object to the component.
@@ -90,16 +100,14 @@ Example:
   }}
 />
 ```
+## Horizontal and Vertical Offset
+If x or y is not provided, they default to "20px".
+x : Determines the horizontal distance from the right edge of the screen. 
+y : Determines the vertical distance from the bottom edge of the screen. 
 
-## Props
-
-| Prop       | Type                             | Description                                                                                                                                     | Default               |
-| ---------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| `sections` | `React.RefObject<HTMLElement>[]` | An array of refs that reference the sections you want to scroll through. Each section must be wrapped with `ref` using `useRef` or `createRef`. | -                     |
-| `style`    | `React.CSSProperties`            | An optional prop to customize the styling of the button. You can override the default button styling with this prop.                            | Default style applies |
-| `x and y`    | `React.CSSProperties`            | x: Determines the horizontal distance from the right edge of the screen. y: Determines the vertical distance from the bottom edge of the screen.                            | Default style applies |
-
-
+```javascript
+   <ScrollToNext sections={sections} x={"5px"} y={"10px"}/>
+```
 
 ## Contributing
 
