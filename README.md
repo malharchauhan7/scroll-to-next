@@ -100,17 +100,21 @@ Example:
   }}
 />
 ```
-## Horizontal and Vertical Offset
-If x or y is not provided, they default to "20px".
-x : Determines the horizontal distance from the right edge of the screen. 
-y : Determines the vertical distance from the bottom edge of the screen. 
-
+## Horizontal and Vertical Offset (x, y)
+### Defaults:
+- x: "20px" (distance from the right edge of the screen).
+- y: "20px" (distance from the bottom edge of the screen).
+Description: Customize the button's position on the screen. Accepts any valid CSS unit (e.g., "5px", "10%", "1rem").
+### Example Usage: 
 ```javascript
    <ScrollToNext sections={sections} x={"5px"} y={"10px"}/>
 ```
 
-## ShowonMobile
-By default, showOnMobile is true, if you don't want to render button on mobile devices you can set to false
+## Show on Mobile (showOnMobile)
+### Default: true
+#### Description: Toggles the visibility of the button on mobile devices.
+ - true: The button is rendered on all devices.
+ - false: The button is hidden on devices with a screen width of 768px or less.
 ```javascript
   <ScrollToNext sections={sections} x={"5px"} y={"10px"} showOnMobile={false}/>
 ```
