@@ -97,6 +97,9 @@ Example:
 | ---------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `sections` | `React.RefObject<HTMLElement>[]` | An array of refs that reference the sections you want to scroll through. Each section must be wrapped with `ref` using `useRef` or `createRef`. | -                     |
 | `style`    | `React.CSSProperties`            | An optional prop to customize the styling of the button. You can override the default button styling with this prop.                            | Default style applies |
+| `x and y`    | `React.CSSProperties`            | x: Determines the horizontal distance from the right edge of the screen. y: Determines the vertical distance from the bottom edge of the screen.                            | Default style applies |
+
+
 
 ## Contributing
 

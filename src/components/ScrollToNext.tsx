@@ -3,10 +3,12 @@ import  { useState } from "react";
 
 interface ScrollToNextProps {
   sections: React.RefObject<HTMLElement>[];
-  style?:React.CSSProperties
+  style?:React.CSSProperties,
+  x ?: React.CSSProperties,
+  y ?: React.CSSProperties
 }
 
-const ScrollToNext: React.FC<ScrollToNextProps> = ({ sections , style}) => {
+const ScrollToNext: React.FC<ScrollToNextProps> = ({ sections , style, x="20px", y="20px"}) => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState<number>(0);
 
   
@@ -34,8 +36,8 @@ const ScrollToNext: React.FC<ScrollToNextProps> = ({ sections , style}) => {
       onClick={scrollToNextSection}
       style={{
         position: "fixed",
-          bottom: "20px",
-          right: "20px",
+          bottom: y,
+          right: x,
           width: "60px",
           height: "60px",
           backgroundColor: "black",
