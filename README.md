@@ -105,7 +105,7 @@ Example:
 - x: "20px" (distance from the right edge of the screen).
 - y: "20px" (distance from the bottom edge of the screen).
 Description: Customize the button's position on the screen. Accepts any valid CSS unit (e.g., "5px", "10%", "1rem").
-### Example Usage: 
+#### Example Usage: 
 ```javascript
    <ScrollToNext sections={sections} x={"5px"} y={"10px"}/>
 ```
@@ -115,6 +115,7 @@ Description: Customize the button's position on the screen. Accepts any valid CS
 #### Description: Toggles the visibility of the button on mobile devices.
  - true: The button is rendered on all devices.
  - false: The button is hidden on devices with a screen width of 768px or less.
+#### Example Usage: 
 ```javascript
   <ScrollToNext sections={sections} x={"5px"} y={"10px"} showOnMobile={false}/>
 ```
